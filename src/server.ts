@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 dotenv.config()
-import express, { NextFunction } from 'express'
+import express from 'express'
 import cors from 'cors'
 import { errorHandler } from './middleware/errorHandler'
 import { linkRouter } from './routers/linkRouter'
