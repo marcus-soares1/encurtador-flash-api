@@ -9,7 +9,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 app.use(cors())
-app.use('/', linkRouter)
+app.use('/api', linkRouter)
 app.use(errorHandler)
 
 app.listen(PORT, ()=> console.log(`Server running in port: ${PORT}`))
