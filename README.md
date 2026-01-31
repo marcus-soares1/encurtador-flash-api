@@ -1,7 +1,7 @@
 # Encurtador de links Flash API
 **Status**: Fase 1 da implementação concluída. 
 API encurtadora de links. Envie um link longo, receba um link curto.
-Link: produção
+Link: https://encurtador-flash-api.onrender.com/
 
 ## 🔍   Prévia: O que você vai encontrar
 - **API** contruída no padrão **REST**
