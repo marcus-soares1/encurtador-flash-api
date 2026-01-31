@@ -9,6 +9,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 app.use(cors())
+app.get('/', () => console.log('Encurtador de links flash, envie um link longo, receba um link curto!'))
 app.use('/api', linkRouter)
 app.use(errorHandler)
 
