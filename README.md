@@ -8,6 +8,10 @@ Link: https://encurtador-flash-api.onrender.com/
 - **Arquitetura** que segue os princípios **SOLID**
 - **Validação de dados** com ZOD
 
+## Documentação POSTMAN
+Link: https://marcus-4719006.postman.co/workspace/Marcus's-Workspace~d01073a8-f4dc-4829-86ee-d8fe9f1e14d1/collection/44512604-246598c5-674a-43c7-bbdd-840bffa923d9?action=share&creator=44512604
+
+
 ## 📁 Estrutura do Projeto
 
 ```

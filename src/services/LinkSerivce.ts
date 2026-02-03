@@ -13,6 +13,8 @@ export class LinkService {
     async access (short_link: string): Promise<string> {
         const link = await this.linkRepository.get({where: {short_link}})
         const today = new Date()
+        // console.log(link)
+        // console.log(today)
         if(!link || link.expiration_date && today > link.expiration_date) throw new HttpError('This link is not valid or is expired.')
 
         await this.addClick(short_link)

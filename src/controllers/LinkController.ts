@@ -9,9 +9,16 @@ export class LinkController {
     // GET /:short_link
     access: Handler = async (req, res, next) => {
         try {
+            // console.log(req.body) 
             const { short_link } = LinkRequestSchema.parse(req.params)
             const fullLink = await this.linkService.access(short_link)
 
+            const json = req.query.json
+            // console.log(fullLink)
+            if (json === 'true') { 
+                res.json({ redirectTo: fullLink })
+            }
+            
             res.redirect(fullLink)
         } catch (error) {
             next(error)
@@ -32,7 +39,7 @@ export class LinkController {
     }
 
     // GET /
-    geAllLinks: Handler = async (req, res, next) => {
+    getAllLinks: Handler = async (req, res, next) => {
         try {
             const links = await this.linkService.getAllLinks()
             
@@ -46,6 +53,7 @@ export class LinkController {
     // POST /
     create: Handler = async (req, res, next) => {
         try {
+            // console.log(req.body)
             const linkAttributes = LinkCreateSchema.parse(req.body)
             const link = await this.linkService.createShortLink(linkAttributes)
 
