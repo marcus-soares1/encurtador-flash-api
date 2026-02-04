@@ -4,8 +4,12 @@
   "description": "API encurtador de vídeos",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "build": "prisma generate && tsc",
     "postbuild": "prisma migrate deploy && prisma db seed",
+=======
+    "build": "prisma migrate dev && prisma generate && tsc && npx prisma db seed",
+>>>>>>> 750ab4cf3abb0eb2dff0916dd07adc7b158ace4f
     "start": "node ./build/server.js",
     "dev": "tsx watch ./src/server.ts"
   },
